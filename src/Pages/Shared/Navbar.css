@@ -1,0 +1,25 @@
+@media screen and (max-width: 700px) {
+    .menu-bar{
+        display: block;
+    }
+    .responsive{
+        position: absolute;
+        margin-top: 89px;
+        width: 92%;
+        display: block;
+        padding: 20px 20px;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.817);
+        backdrop-filter: blur(5px) !important;
+        height: 60vh;
+        z-index: 10;
+       
+    }
+    .responsiveRightSide{
+        position: absolute;
+        display: block;
+        margin-top: 600px;
+        left: 50px;
+        z-index: 10;
+    }
+}
