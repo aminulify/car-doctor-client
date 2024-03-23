@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigation } from 'react-router-dom';
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import './Navbar.css';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const [navbarMobile, setNavbarMobile] = useState(false);
+    const {loading} = useContext(AuthContext);
+    const navigation = useNavigation();
 
     const handleResponsiveBtn = () =>{
         setNavbarMobile(!navbarMobile);
     }
 
     return (
+        <>
+        {
+            navigation.state==="loading"? <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""
+          
+        }
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
             {/* left side  */}
             <Link to="/">
@@ -47,6 +55,7 @@ const Navbar = () => {
                 <Link to='/' className=''><button className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Appointment</button></Link>
             </div>
         </div>
+        </>
     );
 };
 
