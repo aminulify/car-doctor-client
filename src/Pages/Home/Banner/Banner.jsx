@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div data-aos="fade-right" className='lg:mx-20 md:mx-20 mx-5'>
+        <div data-aos="fade-right" className='lg:mx-20 md:mx-8 mx-5'>
             <div className="carousel carousel-img w-full h-[400px]">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="./assets/images/banner/1.jpg" className=" w-full bg-left-top" />

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <div className=' mb-16 pt-10 md:my-16 md:grid md:grid-cols-2 flex flex-col-reverse mx-8 md:mx-20 gap-10 items-center' id='about'>
+        <div className=' mb-16 pt-10 md:my-16 md:grid md:grid-cols-2 flex flex-col-reverse mx-8 lg:mx-20 md:mx-8 gap-10 items-center' id='about'>
             <div data-aos="fade-right" className='relative'>
                 <img src="./assets/images/about_us/person.jpg" alt="person_img" className='w-5/6 h-[420px] object-cover rounded-xl object-left'/>
                 

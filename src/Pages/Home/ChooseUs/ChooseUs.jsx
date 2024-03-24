@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChooseUs = () => {
     return (
-        <div className='text-center md:mx-20 mx-5'>
+        <div className='text-center lg:mx-20 md:mx-8 mx-5'>
             <div data-aos="fade-left">
                 <h2 className='font-bold text-lg text-[var(--mainColor)]'>Core Features</h2>
                 <h1 className='font-bold md:text-6xl text-4xl pb-2'>Why Choose Us</h1>

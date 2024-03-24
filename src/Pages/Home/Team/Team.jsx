@@ -16,7 +16,7 @@ const Team = () => {
 
 
             {/* carousel  */}
-                <div data-aos="fade-right" className='lg:mx-20 md:mx-20 mx-5 mb-5'>
+                <div data-aos="fade-right" className='lg:mx-20 md:mx-8 mx-5 mb-5'>
                 <div className="carousel w-full h-[260px] md:h-[500px]">
                 <div id="slide11" className="carousel-item relative w-full">
                     <div className='grid grid-cols-2 md:grid-cols-3 w-full justify-center gap-5 items-center'>

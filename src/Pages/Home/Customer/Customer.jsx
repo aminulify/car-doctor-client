@@ -5,7 +5,7 @@ import { IoMdStarOutline } from "react-icons/io";
 
 const Customer = () => {
     return (
-        <div className='text-center md:mx-20 mx-5 py-16'>
+        <div className='text-center lg:mx-20 md:mx-8 mx-5 py-16'>
             <div data-aos="fade-left">
                 <h2 className='font-bold text-lg text-[var(--mainColor)]'>Testimonial</h2>
                 <h1 className='font-bold md:text-6xl text-4xl pb-2'>What Customer Says</h1>
