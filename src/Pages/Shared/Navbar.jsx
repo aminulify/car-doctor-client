@@ -52,7 +52,7 @@ const Navbar = () => {
                     <div className='text-xl hover:text-[var(--mainColor)]'><IoBagHandleOutline/></div>
                 <div className='text-xl lg:mx-4 md:mx-4 mx-2 hover:text-[var(--mainColor)]'><IoSearch/></div>
                 </div>
-                <Link to='/' className=''><button className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Appointment</button></Link>
+                <Link to='/services/65ff12d7ef05b89aa3ce6d3e' className=''><button className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Appointment</button></Link>
             </div>
         </div>
         </>

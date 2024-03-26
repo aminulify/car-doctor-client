@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
@@ -7,6 +7,10 @@ const Register = () => {
     const {createUser, moreDetailsUser, googleAuthPopUp, facebookAuthPop} = useContext(AuthContext);
     const [passwordError, setPasswordError] = useState(null);
     const navigate = useNavigate();
+
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
+
     // email/password auth 
     const handleRegister = (event) =>{
         event.preventDefault();
@@ -37,8 +41,9 @@ const Register = () => {
                     confirmButtonText: "Done",
                     confirmButtonColor: "#ff3811",
                   });
-                navigate('/');
-                console.log(result.user);
+                  navigate(from, {replace:true});
+                  
+                // console.log(result.user);
             })
             .catch(e=>console.log("normal",e));        
             })
@@ -56,7 +61,7 @@ const Register = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-            navigate('/');
+              navigate(from);
         })
         .catch(e=>console.log("normal",e)); 
         
@@ -72,7 +77,7 @@ const Register = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-            navigate('/');
+              navigate(from);
         })
         .catch(e=>console.log("normal",e)); 
     }

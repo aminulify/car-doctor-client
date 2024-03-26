@@ -1,9 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const {signInUser} = useContext(AuthContext);
+
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
+
+    const navigate = useNavigate();
+
     const handleLogin = (event) =>{
         event.preventDefault();
         const field = event.target;
@@ -21,7 +28,7 @@ const Login = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-            navigate('/');
+            navigate(from);
         })
         .catch(e=>console.log(e));
     }

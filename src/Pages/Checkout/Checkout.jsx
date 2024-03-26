@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Footer from '../Shared/Footer';
-import Navbar from '../Shared/Navbar';
 import PrivateNavbar from '../../PrivateRoutes/PrivateNavbar';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Checkout = () => {
     const id = useParams();
+    const {user} = useContext(AuthContext);
 
     const loadSingleData = useLoaderData();
     const {_id, title, img, price} = loadSingleData;
@@ -13,6 +15,45 @@ const Checkout = () => {
     useEffect(()=>{
         window.scrollTo(0,0);
     },[])
+
+    const handleCheckout = (event) =>{
+        event.preventDefault();
+        const field = event.target;
+        const name = field.name.value;
+        const email = field.email.value;
+        const photoURL = img;
+        const date = field.date.value;
+        const phone = field.phone.value;
+        const service = field.service.value;
+        const massage = field.massage.value;
+        const dueAmount = price;  // get from load data
+
+        const booking = {name, email, photoURL, date, phone, service, dueAmount, massage};
+        // console.log(booking);
+
+        fetch('http://localhost:5000/booking',{
+            method:"POST",
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+        .then(res=>res.json())
+        .then(data=> {
+            // successful massage 
+            Swal.fire({
+                title:"Congratulation! Booking Successful.",
+                confirmButtonText:"Thanks",
+                confirmButtonColor: "#ff3811"
+                
+        });
+        });
+
+        event.target.reset();
+        
+
+        
+    }
 
     return (
         <div>
@@ -33,20 +74,22 @@ const Checkout = () => {
             </div>
 
                 {/* form section */}
-                <form data-aos="fade-right" className='mb-10 p-16 bg-slate-100 rounded-xl'>
+                <form onSubmit={handleCheckout} data-aos="fade-right" className='mb-10 p-16 bg-slate-100 rounded-xl'>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
-                        <input type="text" name='name' placeholder='Your Name' className='py-3 pl-2 rounded-md' />
+                        <input type="text" name='name' placeholder='Your Name' defaultValue={user?.displayName} className='py-3 pl-2 rounded-md' />
+
+                        {/* **** npm day-picker = react has stylist date picker component */}
                         <input type="date" name='date' className='py-3 px-2 rounded-md' />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
                         <input type="text" name='phone' placeholder='Your Phone' className='py-3 pl-2 rounded-md' />
-                        <input type="text" name='email' placeholder='Your Email' className='py-3 pl-2 rounded-md' />
+                        <input type="text" name='email' defaultValue={user?.email} placeholder='Your Email' className='py-3 pl-2 rounded-md' />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
                         <input type="text" name='service' defaultValue={"Service: "+title} className='py-3 pl-2 rounded-md' readOnly/>
-                        <input type="text" name='dueAmount' defaultValue={"Price: $"+price} className='py-3 pl-2 rounded-md' readOnly/>
+                        <input type="text" name='dueAdueAmount' defaultValue={"Price: $"+price} className='py-3 pl-2 rounded-md' readOnly/>
                     </div>
-                    <textarea name="massage" id="" className='w-full p-2' rows="8" placeholder='Your Massage'></textarea>
+                    <textarea name="massage" id="" className='w-full p-2' rows="8" placeholder='Write about your car...'></textarea>
 
                     {/* btn  */}
                     <button className='mt-5 py-2 rounded-md w-full border-2 border-[var(--mainColor)] bg-[var(--mainColor)] font-semibold text-white text-lg hover:bg-transparent hover:text-[var(--mainColor)] hover:border-2 hover:border-[var(--mainColor)] hover:duration-500'>Proceed Checkout</button>
