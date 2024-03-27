@@ -19,7 +19,7 @@ const Order = () => {
             setOrders(data);
             setLoading(false);
         });
-    },[url])
+    },[orders])
 
     // delete data service 
     const handleDeleteService = (_id) =>{
@@ -52,7 +52,7 @@ const Order = () => {
     }
 
     const [shareId, setShareId] = useState(null);
-    console.log(shareId);
+    // console.log(shareId);
 
     // update modal
     const [updateModal, setUpdateModal] = useState(false);
@@ -88,7 +88,7 @@ const Order = () => {
         console.log(update);
 
         fetch(`http://localhost:5000/booking/${shareId}`,{
-                method: "PATCH",
+                method: "PUT",
                 headers: {
                     "Content-Type":"application/json"
                 },
@@ -98,13 +98,22 @@ const Order = () => {
             .then(data=> {
                 // console.log(data);
                 if(data.modifiedCount>0){
+
+                    // update status 
+                    const remaining = orders.filter(order=>order._id !== shareId);
+                    const update = orders.find(updateOrder=>updateOrder._id === shareId);
+
+                    const updatedItems = [update, ...remaining];
+                    setOrders(updatedItems);
+
                     Swal.fire({
                         title:"Congratulation! Updated Successfully.",
                         confirmButtonText:"OK",
                         confirmButtonColor: "#ff3811"
                         
                 })
-                
+
+               
                 } 
             });
             setUpdateModal(false);
@@ -132,6 +141,49 @@ const Order = () => {
     }
     const handleUpdateClose = ()=>{
         setUpdateModal(false);
+    }
+
+    // confirm button 
+    const handleConfirm = (_id) =>{
+        console.log(_id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#22c55e",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Approve"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/booking/${_id}`,{
+                method: "PATCH",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({status: 'Confirm'})
+            })
+            .then(res=>res.json())
+            .then(data=> {console.log(data)
+                if(data.modifiedCount>0){
+                    // update status 
+                    const remaining = orders.filter(order=>order._id !== _id);
+                    const update = orders.find(updateOrder=>updateOrder._id === _id);
+
+                    const updatedItems = [update, ...remaining];
+                    setOrders(updatedItems);
+                }
+            });
+              Swal.fire({
+                title: "Approved",
+                text: "Appointment Approval Successfully",
+                icon: "success",
+                confirmButtonColor: "#ff3811"
+              });
+            }
+          });
+
+        
     }
     
     return (
@@ -239,6 +291,8 @@ const Order = () => {
                     handleDetailsModal={handleDetailsModal}
                     handleDeleteService={handleDeleteService}
                     handleEditService={handleEditService}
+                    handleConfirm={handleConfirm}
+                   
                 
                     ></OrderMaping>)
                 }

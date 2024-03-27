@@ -3,9 +3,8 @@ import { IoCloseCircle } from "react-icons/io5";
 import { MdEditSquare } from "react-icons/md";
 import './OrderMaping.css';
 
-const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditService}) => {
-    const {_id, photoURL, email, date, service, dueAmount} = order;
-    
+const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditService, handleConfirm}) => {
+    const {_id, photoURL, email, date, service, dueAmount, status} = order;
     
     return (
         <div data-aos="fade-right" className='mb-10 items-center md:grid md:grid-cols-2 justify-between md:border-none md:p-0 border p-5 md:rounded-none rounded-md'>
@@ -33,7 +32,10 @@ const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditS
                     </div>
                 </div>
                 <div className='grid md:grid-cols-1 grid-cols-2 md:gap-3 gap-5'>
-                    <button className='px-6 py-3 text-white bg-[var(--mainColor)] rounded-sm font-medium cursor-not-allowed'>Pending</button>
+                    {
+                        status==='Confirm' ? <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-green-500 rounded-sm font-medium'>Approved</button> : <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-[var(--mainColor)] rounded-sm font-medium'>Pending</button> 
+                    }
+                    
                     <button onClick={()=>handleDetailsModal(_id)} className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Details</button>
                 </div>
             </div>
