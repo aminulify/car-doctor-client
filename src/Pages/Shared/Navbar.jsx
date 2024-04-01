@@ -9,7 +9,6 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const [navbarMobile, setNavbarMobile] = useState(false);
-    const {loading} = useContext(AuthContext);
     const navigation = useNavigation();
 
     const handleResponsiveBtn = () =>{

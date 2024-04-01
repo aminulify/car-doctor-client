@@ -28,7 +28,11 @@ const Login = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-            navigate(from);
+        
+        
+            // jwt security access use on AuthProvider as a global
+            
+                navigate(from);
         })
         .catch(e=>console.log(e));
     }

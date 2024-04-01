@@ -5,19 +5,39 @@ import Footer from '../Shared/Footer';
 import OrderMaping from './OrderMaping';
 import Swal from 'sweetalert2';
 import { IoCloseCircle } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
+// const [countOrder,setCountOrder] = useState([]);
 const Order = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
     const [orders,setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
-    const url = `http://localhost:5000/booking?email=${user?.email}`;
+
+    
+    
     useEffect(()=>{
-        fetch(url)
+        const url = `http://localhost:5000/booking?email=${user?.email}`;
+        fetch(url,{
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('car-access-token')}`
+            }
+        })
         .then(res=>res.json())
         .then(data=>{
-            setOrders(data);
-            setLoading(false);
+            if(!data.error){
+                setOrders(data);
+                setLoading(false);
+            
+            }
+            else{
+                logOut()
+                .then(()=>{})
+                .catch(e=>e);
+                navigate('/login');
+            }
         });
     },[orders])
 
@@ -38,11 +58,13 @@ const Order = () => {
                 })
                 .then(res=>res.json())
                 .then(data=> {
-                    console.log(data);
+                    // console.log(data);
                     if(data.deletedCount>0){
                         const remaining = orders.filter(order=> order._id!==_id);
-                        setOrders(remaining);
+                        setOrders(remaining);   
                     }
+
+                    setShowModal(false);
                 });
             }
           });

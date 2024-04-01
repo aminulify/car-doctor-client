@@ -8,12 +8,14 @@ import { Link, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 const PrivateNavbar = () => {
     const [navbarMobile, setNavbarMobile] = useState(false);
     const {logOut, user} = useContext(AuthContext);
     const navigation = useNavigation();
 
     const [dataCount, setDataCount] = useState([]);
+    console.log(dataCount);
 
     
 
@@ -34,17 +36,25 @@ const PrivateNavbar = () => {
           }).then((result) => {
             if (result.isConfirmed) {
                 logOut()
-                .then(()=>{})
+                .then(()=>{
+                    localStorage.removeItem('car-access-token');
+                })
                 .catch(e=>console.log(e));
             }
           });
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/booking?email=${user?.email}`)
+        const url = `http://localhost:5000/booking?email=${user?.email}`
+        fetch(url,{
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('car-access-token')}`
+            }
+        })
         .then(res=>res.json())
-        .then(data=>setDataCount(data.length));
-    },[])
+        .then(data=>data ? setDataCount(data.length) : setDataCount('?'));
+    },[]);
 
     
 
@@ -81,7 +91,7 @@ const PrivateNavbar = () => {
             <div className={`lg:flex md:flex block items-center ${navbarMobile ? 'responsiveRightSide':'hidden'}`}>
                 <div className='flex my-3 lg:my-0 md:my-0 relative'>
                     <Link to='/order'>
-                        <div className='text-xl hover:text-[var(--mainColor)]'><IoBagHandleOutline/><div className='absolute w-3 h-3 rounded-full bg-[var(--mainColor)] top-0 md:right-12 right-16 text-[8px]'><h1 className='absolute -top-2 left-[3px] text-white font-bold'>{dataCount}</h1></div></div>
+                        <div className='text-xl hover:text-[var(--mainColor)]'><IoBagHandleOutline/><div className='absolute w-3 h-3 rounded-full bg-[var(--mainColor)] top-0 md:right-12 right-16 text-[8px]'><h1 className='absolute -top-2 left-[3px] text-white font-bold'>{dataCount ? dataCount : '...'}</h1></div></div>
                     </Link>
                 <div className='text-xl lg:mx-4 md:mx-4 mx-2 hover:text-[var(--mainColor)]'><IoSearch/></div>
                 </div>

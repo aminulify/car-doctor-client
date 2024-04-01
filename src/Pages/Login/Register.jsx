@@ -4,7 +4,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Register = () => {
-    const {createUser, moreDetailsUser, googleAuthPopUp, facebookAuthPop} = useContext(AuthContext);
+    const {createUser, moreDetailsUser, googleAuthPopUp, facebookAuthPop, user} = useContext(AuthContext);
     const [passwordError, setPasswordError] = useState(null);
     const navigate = useNavigate();
 
@@ -41,11 +41,13 @@ const Register = () => {
                     confirmButtonText: "Done",
                     confirmButtonColor: "#ff3811",
                   });
-                  navigate(from, {replace:true});
-                  
-                // console.log(result.user);
+                 
             })
-            .catch(e=>console.log("normal",e));        
+            .catch(e=>console.log("normal",e));     
+            
+            
+             // jwt security access use on AuthProvider as a global
+            navigate(from, { replace: true });
             })
 
          .catch(e=>console.log("main",e));   
@@ -53,7 +55,10 @@ const Register = () => {
     // google 
     const handleGoogleAuth = () =>{
         googleAuthPopUp()
-        .then(()=>{
+        .then((result)=>{
+            const user = result.user;  
+            // console.log(user); 
+
             Swal.fire({
                 title: "Congratulations!",
                 text: "Registration Completed With Google",
@@ -61,7 +66,11 @@ const Register = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-              navigate(from);
+
+             // jwt security access use on AuthProvider as a global
+            navigate(from, { replace: true });
+
+
         })
         .catch(e=>console.log("normal",e)); 
         
@@ -69,7 +78,10 @@ const Register = () => {
     // facebook 
     const handleFbAuth = () =>{
         facebookAuthPop()
-        .then(()=>{
+        .then((result)=>{
+            const user = result.user;
+            // console.log(user);
+
             Swal.fire({
                 title: "Congratulations!",
                 text: "Registration Completed With Facebook",
@@ -77,10 +89,16 @@ const Register = () => {
                 confirmButtonText: "Done",
                 confirmButtonColor: "#ff3811",
               });
-              navigate(from);
+
+              // jwt security access use on AuthProvider as a global
+            navigate(from, { replace: true });
+
+
         })
         .catch(e=>console.log("normal",e)); 
     }
+
+
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:mx-20 mx-5 md:py-10 mb-10 items-center mt-3 md:mt-0 overflow-hidden'>
         <div>
