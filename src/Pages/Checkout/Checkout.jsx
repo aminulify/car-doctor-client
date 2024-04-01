@@ -31,7 +31,7 @@ const Checkout = () => {
         const booking = {name, email, photoURL, date, phone, service, dueAmount, massage};
         // console.log(booking);
 
-        fetch('http://localhost:5000/booking',{
+        fetch('https://car-doctor-server-seven-rho.vercel.app/booking',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'
@@ -63,7 +63,7 @@ const Checkout = () => {
            <div className='md:mx-8 lg:mx-20 mx-5 overflow-hidden'>
                 {/* header img */}
             <div data-aos="fade-down" className='relative mt-3 md:mb-16 mb-8'>
-                <img src="../../../../public/assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
+                <img src="./assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
 
                 <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.5)] rounded-xl w-full h-full top-0'>
                     <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-150%] md:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Check Out</h1>

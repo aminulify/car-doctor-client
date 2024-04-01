@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     // service load 
     const [serviceTitle, setServiceTitle] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://car-doctor-server-seven-rho.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServiceTitle(data))
 
@@ -34,7 +34,7 @@ const ServiceDetails = () => {
             <div className='md:mx-8 lg:mx-20 mx-5 overflow-hidden'>
             {/* header img */}
             <div data-aos="fade-down" className='relative mt-3 md:mb-16 mb-10'>
-                <img src="../../../../public/assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
+                <img src="../../assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
 
                 <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.5)] rounded-xl w-full h-full top-0'>
                     <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-150%] md:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Service Details</h1>
@@ -108,7 +108,7 @@ const ServiceDetails = () => {
                     </div>
                     {/* video  */}
                     <div data-aos="fade-right">
-                        <video src="../../../../public/assets/images/BMW.mp4" className='w-full rounded-xl mb-10' poster='../../../../public/assets/images/banner/2.jpg' muted autoPlay controls></video>
+                        <video src="../../assets/images/BMW.mp4" className='w-full rounded-xl mb-10' poster='../../assets/images/banner/2.jpg' muted autoPlay controls></video>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@ const ServiceDetails = () => {
                          
                     </div>
                         <div data-aos="fade-left" className='my-10 p-10 pb-16 rounded-xl bg-slate-900 text-white'>
-                            <img src="../../../../public/assets/logodark.svg" className='w-32 mx-auto' alt="" />
+                            <img src="./assets/logodark.svg" className='w-32 mx-auto' alt="" />
 
                             <h2 className='my-5 font-bold text-2xl text-center'>Need Help? We Are Here to Help You</h2>
 

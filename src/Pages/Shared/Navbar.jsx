@@ -24,7 +24,7 @@ const Navbar = () => {
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
             {/* left side  */}
             <Link to="/">
-                <img src="../../../public/assets/logo.svg" className='w-20' alt="" />
+                <img src="./assets/logo.svg" className='w-20' alt="" />
             </Link>
 
              {/* menu close btn */}

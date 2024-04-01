@@ -45,7 +45,7 @@ const PrivateNavbar = () => {
     }
 
     useEffect(()=>{
-        const url = `http://localhost:5000/booking?email=${user?.email}`
+        const url = `https://car-doctor-server-seven-rho.vercel.app/booking?email=${user?.email}`
         fetch(url,{
             method: 'GET',
             headers: {
@@ -68,7 +68,7 @@ const PrivateNavbar = () => {
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
             {/* left side  */}
             <Link to="/">
-                <img src="../../../public/assets/logo.svg" className='w-20' alt="" />
+                <img src="./assets/logo.svg" className='w-20' alt="" />
             </Link>
 
              {/* menu close btn */}
