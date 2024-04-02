@@ -214,7 +214,7 @@ const Order = () => {
     }
     
     return (
-        <div>
+        <div className='bg-white text-slate-800'>
             {/* spinner  */}
             {
                 loading ? <span className="absolute top-[70%] z-30 left-[50%] translate-x-[-50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ''

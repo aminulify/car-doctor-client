@@ -5,7 +5,7 @@ import { Navigate, useLocation, useNavigation } from 'react-router-dom';
 const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext);
     const location = useLocation();
-    console.log(location.pathname, location);
+    // console.log(location.pathname, location);
 
     const navigation = useNavigation();
  

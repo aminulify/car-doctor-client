@@ -108,17 +108,17 @@ const Register = () => {
                
                 <div>
                 <label className='font-medium text-slate-700'>Name</label>
-                <input type="text" placeholder='Name' name='name' className='rounded-sm border py-2 w-full pl-1' required/>
+                <input type="text" placeholder='Name' name='name' className='rounded-sm border py-2 w-full pl-1 bg-white' required/>
                 </div>
 
                 <div className='my-3'>
                 <label className='font-medium text-slate-700'>Email</label>
-                <input type="text" placeholder='Email' name='email' className='rounded-sm border py-2 w-full pl-1' required/>
+                <input type="text" placeholder='Email' name='email' className='rounded-sm border py-2 w-full pl-1 bg-white' required/>
                 </div>
                 
                 <div>
                 <label className='font-medium text-slate-700'>Password</label>
-                <input type="password" placeholder='Password should be more than 6 Character' name='password' className='rounded-sm border py-2 w-full pl-1'/>
+                <input type="password" placeholder='Password should be more than 6 Character' name='password' className='rounded-sm border py-2 w-full pl-1 bg-white'/>
                 <label className='text-red-500 text-sm'>{passwordError}</label>
                 </div>
 

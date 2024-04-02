@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <>
+        <div className="bg-white text-slate-600">
         {
             navigation.state==="loading"? <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""
           
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <Link to='/services/65ff12d7ef05b89aa3ce6d3e' className='' onClick={handleScroll}><button className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Appointment</button></Link>
             </div>
         </div>
-        </>
+        </div>
     );
 };
 

@@ -11,7 +11,7 @@ import Customer from '../Customer/Customer';
 
 const Header = () => {
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden bg-white text-slate-800'>
             <Banner></Banner>
             <About></About>
             <Services></Services>

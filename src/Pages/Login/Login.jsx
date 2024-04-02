@@ -46,12 +46,12 @@ const Login = () => {
                
                 <div>
                 <label className='font-medium text-slate-700'>Email</label>
-                <input type="text" placeholder='Email' name='email' className='rounded-sm border py-2 w-full pl-1'/>
+                <input type="text" placeholder='Email' name='email' className='rounded-sm border py-2 w-full pl-1 bg-white'/>
                 </div>
                 
                 <div className='mt-3'>
                 <label className='font-medium text-slate-700'>Password</label>
-                <input type="password" placeholder='Password' name='password' className='rounded-sm border py-2 w-full pl-1'/>
+                <input type="password" placeholder='Password' name='password' className='rounded-sm border py-2 w-full pl-1 bg-white'/>
                 </div>
 
                 <button className='w-full py-2 mt-5 bg-[var(--mainColor)] font-semibold text-white   rounded-sm border-2 border-[var(--mainColor)] hover:bg-white hover:text-[var(--mainColor)] hover:duration-500'>Login</button>

@@ -59,7 +59,7 @@ const PrivateNavbar = () => {
     
 
     return (
-        <div>
+        <div className='bg-white text-slate-800'>
 
         {
             navigation.state==="loading"? <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""

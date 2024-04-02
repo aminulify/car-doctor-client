@@ -59,7 +59,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className='bg-white'>
             {/* private navbar  */}
             <PrivateNavbar></PrivateNavbar>
 
@@ -79,20 +79,20 @@ const Checkout = () => {
                 {/* form section */}
                 <form onSubmit={handleCheckout} data-aos="fade-right" className='mb-10 p-16 bg-slate-100 rounded-xl'>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
-                        <input type="text" name='name' placeholder='Your Name' defaultValue={user?.displayName} className='py-3 pl-2 rounded-md' />
+                        <input type="text" name='name' placeholder='Your Name' defaultValue={user?.displayName} className='py-3 pl-2 rounded-md bg-white text-slate-900' />
 
                         {/* **** npm day-picker = react has stylist date picker component */}
-                        <input type="date" name='date' className='py-3 px-2 rounded-md' />
+                        <input type="date" name='date' className='py-3 px-2 rounded-md bg-white text-slate-900' />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
-                        <input type="text" name='phone' placeholder='Your Phone' className='py-3 pl-2 rounded-md' />
-                        <input type="text" name='email' defaultValue={user?.email} placeholder='Your Email' className='py-3 pl-2 rounded-md' />
+                        <input type="text" name='phone' placeholder='Your Phone' className='py-3 pl-2 rounded-md bg-white text-slate-900' />
+                        <input type="text" name='email' defaultValue={user?.email} placeholder='Your Email' className='py-3 pl-2 rounded-md bg-white text-slate-900' />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-5 mb-5'>
-                        <input type="text" name='service' defaultValue={"Service: "+title} className='py-3 pl-2 rounded-md' readOnly/>
-                        <input type="text" name='dueAdueAmount' defaultValue={"Price: $"+price} className='py-3 pl-2 rounded-md' readOnly/>
+                        <input type="text" name='service' defaultValue={"Service: "+title} className='py-3 pl-2 rounded-md bg-white text-slate-900' readOnly/>
+                        <input type="text" name='dueAdueAmount' defaultValue={"Price: $"+price} className='py-3 pl-2 rounded-md bg-white text-slate-900' readOnly/>
                     </div>
-                    <textarea name="massage" id="" className='w-full p-2' rows="8" placeholder='Write about your car...'></textarea>
+                    <textarea name="massage" id="" className='w-full p-2 bg-white text-slate-900' rows="8" placeholder='Write about your car...'></textarea>
 
                     {/* btn  */}
                     <button className='mt-5 py-2 rounded-md w-full border-2 border-[var(--mainColor)] bg-[var(--mainColor)] font-semibold text-white text-lg hover:bg-transparent hover:text-[var(--mainColor)] hover:border-2 hover:border-[var(--mainColor)] hover:duration-500'>Proceed Checkout</button>

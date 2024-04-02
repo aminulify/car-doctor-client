@@ -8,7 +8,7 @@ import PrivateNavbar from '../PrivateRoutes/PrivateNavbar';
 const Main = () => {
     const {user} = useContext(AuthContext);
     return (
-        <div>
+        <div className='bg-white text-slate-800'>
             {
                 user?.email ? <PrivateNavbar></PrivateNavbar> : <Navbar></Navbar>
             }
