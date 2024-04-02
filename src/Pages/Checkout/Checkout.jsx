@@ -31,7 +31,7 @@ const Checkout = () => {
         const booking = {name, email, photoURL, date, phone, service, dueAmount, massage};
         // console.log(booking);
 
-        fetch('https://car-doctor-server-seven-rho.vercel.app/booking',{
+        fetch('https://car-doctor-server-kwxj.onrender.com/booking',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'

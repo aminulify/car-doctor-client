@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     useEffect(()=>{
        
 
-        fetch('https://car-doctor-server-seven-rho.vercel.app/services')
+        fetch('https://car-doctor-server-kwxj.onrender.com/services')
         .then(res=>res.json())
         .then(data=>setServiceTitle(data))
 
@@ -132,7 +132,7 @@ const ServiceDetails = () => {
                          
                     </div>
                         <div data-aos="fade-left" className='my-10 p-10 pb-16 rounded-xl bg-slate-900 text-white'>
-                            <img src="./assets/logodark.svg" className='w-32 mx-auto' alt="" />
+                            <img src="../../assets/logodark.svg" className='w-32 mx-auto' alt="" />
 
                             <h2 className='my-5 font-bold text-2xl text-center'>Need Help? We Are Here to Help You</h2>
 

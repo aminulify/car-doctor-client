@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
     const [services,setServices] = useState([]);
     useEffect(()=>{
-        fetch('https://car-doctor-server-seven-rho.vercel.app/services')
+        fetch('https://car-doctor-server-kwxj.onrender.com/services')
         .then(res=>res.json())
         .then(data=>setServices(data));
     },[]);

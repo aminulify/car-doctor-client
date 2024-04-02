@@ -45,7 +45,7 @@ const PrivateNavbar = () => {
     }
 
     useEffect(()=>{
-        const url = `https://car-doctor-server-seven-rho.vercel.app/booking?email=${user?.email}`
+        const url = `https://car-doctor-server-kwxj.onrender.com/booking?email=${user?.email}`
         fetch(url,{
             method: 'GET',
             headers: {
