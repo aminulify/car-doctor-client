@@ -48,6 +48,7 @@ const AuthProvider = ({children}) => {
         const unSubscribe = onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser);
             console.log("user",currentUser);
+            setLoading(false);
 
             if(currentUser && currentUser.email){
                 const loggedUser = {
@@ -67,9 +68,10 @@ const AuthProvider = ({children}) => {
 
                 // WARNING: Local storage is not the best (second best place) store access token
                 localStorage.setItem('car-access-token', data.token);
+                
                
             })
-            setLoading(false);
+            
             }
         })
         return ()=> {

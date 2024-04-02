@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
-import { Navigate, useLocation, useNavigation } from 'react-router-dom';
+import { Navigate, useLocation} from 'react-router-dom';
 
 const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext);
@@ -10,14 +10,13 @@ const PrivateRoute = ({children}) => {
  
 
     if(loading){
-        return <div>
-           <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span>
-            </div>
+        return <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span>
+            
     }
  
 
     if(user?.email){
-        console.log("user",user)
+        // console.log("user",user)
         return children;
     }
  

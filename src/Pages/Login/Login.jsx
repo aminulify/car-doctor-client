@@ -33,6 +33,7 @@ const Login = () => {
             // jwt security access use on AuthProvider as a global
             
                 navigate(from);
+                window.scrollTo(0,0);
         })
         .catch(e=>console.log(e));
     }
