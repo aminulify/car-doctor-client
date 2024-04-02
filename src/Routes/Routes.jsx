@@ -5,8 +5,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import ServiceDetails from "../Pages/Home/Services/ServiceDetails";
 import Checkout from "../Pages/Checkout/Checkout";
-import PrivateRoute from "./PrivateRoute";
 import Order from "../Pages/Order/Order";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         {
           path: "services/:id",
           element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-          loader: ({params})=>fetch(`https://car-doctor-server-seven-rho.vercel.app/services/${params.id}`)
+          loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
         },
              
       ]
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
     {
       path: "/checkout/:id",
       element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-      loader: ({params})=>fetch(`https://car-doctor-server-seven-rho.vercel.app/services/${params.id}`)
+      loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
     },
     {
       path: "/order",

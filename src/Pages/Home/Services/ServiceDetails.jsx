@@ -2,22 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaCircleChevronRight } from "react-icons/fa6";
 import {useParams} from 'react-router-dom'
-import Footer from '../../Shared/Footer';
 
 const ServiceDetails = () => {
+    
     const id = useParams();
     // console.log(id.id);
 
     const loadSingleServiceData = useLoaderData();
     const {_id, title, img, price, facility} = loadSingleServiceData;
 
-    console.log(_id);
+    // console.log(_id);
     
 
     // service load 
     const [serviceTitle, setServiceTitle] = useState([]);
     useEffect(()=>{
-        fetch('https://car-doctor-server-seven-rho.vercel.app/services')
+       
+
+        fetch('http://localhost:5000/services')
         .then(res=>res.json())
         .then(data=>setServiceTitle(data))
 
@@ -28,6 +30,7 @@ const ServiceDetails = () => {
     // scroll up 
     const handleScroll = () =>{
         window.scrollTo(0,0)
+        
     }
     return (
         <div>

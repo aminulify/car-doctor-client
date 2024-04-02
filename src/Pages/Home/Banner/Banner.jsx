@@ -10,7 +10,7 @@ const Banner = () => {
                 <img src="./assets/images/banner/1.jpg" className=" w-full bg-left-top" />
 
                     {/* header text section  */}
-                <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full px-5 bg-opacity-10 rounded-2xl z-3">
+                <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full md:pl-10 px-5 bg-opacity-10 rounded-2xl z-3">
                 <div className='lg:w-1/2 md:w-1/2'>
                     <h1 className=';g:text-6xl md:text-5xl text-4xl font-bold text-white mb-2'>Affordable Price For Car Servicing</h1>
                     <p className='text-white text-sm lg:text-md md:text-md mb-2'>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>

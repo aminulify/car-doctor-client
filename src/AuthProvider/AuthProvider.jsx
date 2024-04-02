@@ -49,13 +49,11 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             console.log("user",currentUser);
 
-
-
             if(currentUser && currentUser.email){
                 const loggedUser = {
                     email:currentUser.email
                 }
-                fetch('https://car-doctor-server-seven-rho.vercel.app/jwt',{
+                fetch('http://localhost:5000/jwt',{
                 method:'POST',
                 headers:{
                     'content-type': 'application/json'
@@ -69,7 +67,7 @@ const AuthProvider = ({children}) => {
 
                 // WARNING: Local storage is not the best (second best place) store access token
                 localStorage.setItem('car-access-token', data.token);
-                navigate(from, { replace: true });
+               
             })
             setLoading(false);
             }

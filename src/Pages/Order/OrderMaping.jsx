@@ -33,7 +33,7 @@ const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditS
                 </div>
                 <div className='grid md:grid-cols-1 grid-cols-2 md:gap-3 gap-5'>
                     {
-                        status==='Confirm' ? <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-green-500 rounded-sm font-medium'>Approved</button> : <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-[var(--mainColor)] rounded-sm font-medium'>Pending</button> 
+                        status ? <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-green-500 rounded-sm font-medium'>{status}</button> : <button onClick={()=>handleConfirm(_id)} className='px-6 py-3 text-white bg-[var(--mainColor)] rounded-sm font-medium'>Pending</button> 
                     }
                     
                     <button onClick={()=>handleDetailsModal(_id)} className='py-2 px-4 border-2 border-[var(--mainColor)] font-semibold text-md text-[var(--mainColor)] hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'>Details</button>
