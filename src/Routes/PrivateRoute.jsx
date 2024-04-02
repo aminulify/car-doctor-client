@@ -7,17 +7,16 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
     // console.log(location.pathname, location);
 
-    const navigation = useNavigation();
  
 
     if(loading){
-        return <div>{
-            navigation.state==="loading" ? <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""
-            }</div>
+        return <div>
+           <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span>
+            </div>
     }
  
 
-    if(user){
+    if(user?.email){
         console.log("user",user)
         return children;
     }

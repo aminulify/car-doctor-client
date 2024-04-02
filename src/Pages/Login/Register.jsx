@@ -21,7 +21,7 @@ const Register = () => {
         const name = field.name.value;
         const email = field.email.value;
         const password = field.password.value;
-        console.log(name,email,password);
+        // console.log(name,email,password);
 
         if(password.length<6){
             setPasswordError("Password should be more than 6 character!")
@@ -30,7 +30,7 @@ const Register = () => {
         createUser(email, password)
         .then(result=>{
             const user= result.user;
-            console.log(user);
+            // console.log(user);
             // alert('good');
 
             moreDetailsUser(name)

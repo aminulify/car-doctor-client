@@ -13,7 +13,7 @@ const ProductCard = ({product}) => {
                 <img src={img} className=" bg-slate-50 w-full h-[300px] object-cover rounded-md" alt="service_image" />
 
                 {/* shopping btn  */}
-                <Link to="/"><button className='absolute top-3 right-3 text-[var(--mainColor)] text-xl p-2 bg-[#fce2de] rounded-md hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'><HiOutlineShoppingBag/></button></Link>
+                <Link to="/order"><button className='absolute top-3 right-3 text-[var(--mainColor)] text-xl p-2 bg-[#fce2de] rounded-md hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'><HiOutlineShoppingBag/></button></Link>
             </div>
 
             {/* rating  */}
