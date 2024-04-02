@@ -11,6 +11,7 @@ const Register = () => {
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/';
 
+
     // email/password auth 
     const handleRegister = (event) =>{
         event.preventDefault();

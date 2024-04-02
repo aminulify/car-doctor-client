@@ -15,7 +15,7 @@ const Order = () => {
     const navigate = useNavigate();
 
 
-    const url = `http://localhost:5000/booking?email=${user?.email}`;
+    const url = `https://car-doctor-server-seven-rho.vercel.app/booking?email=${user?.email}`;
     
     useEffect(()=>{
         
@@ -54,7 +54,7 @@ const Order = () => {
             confirmButtonText: "Delete"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/booking/${_id}`,{
+                fetch(`https://car-doctor-server-seven-rho.vercel.app/booking/${_id}`,{
                     method: "DELETE",
                 })
                 .then(res=>res.json())
@@ -88,7 +88,7 @@ const Order = () => {
         setShowModal(false); //off details modal
         setUpdateModal(true);
 
-        fetch(`http://localhost:5000/booking/${_id}`)
+        fetch(`https://car-doctor-server-seven-rho.vercel.app/booking/${_id}`)
         .then(res=>res.json())
         .then(data=>setUpdateDataShow(data));  
 
@@ -110,7 +110,7 @@ const Order = () => {
         const update = {name, email, date, service, dueAmount, massage, phone};
         console.log(update);
 
-        fetch(`http://localhost:5000/booking/${shareId}`,{
+        fetch(`https://car-doctor-server-seven-rho.vercel.app/booking/${shareId}`,{
                 method: "PUT",
                 headers: {
                     "Content-Type":"application/json"
@@ -179,7 +179,7 @@ const Order = () => {
             confirmButtonText: "Yes, Approve"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/booking/${_id}`,{
+                fetch(`https://car-doctor-server-seven-rho.vercel.app/booking/${_id}`,{
                 method: "PATCH",
                 headers: {
                     "Content-Type":"application/json"
@@ -196,7 +196,7 @@ const Order = () => {
                     const update = orders.find(updateOrder=>updateOrder._id === _id);
 
                     update.status='Approved';
-                    
+
                     const updatedItems = [update, ...remaining];
                     setOrders(updatedItems);
                 }

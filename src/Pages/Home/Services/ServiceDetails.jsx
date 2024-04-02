@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     useEffect(()=>{
        
 
-        fetch('http://localhost:5000/services')
+        fetch('https://car-doctor-server-seven-rho.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServiceTitle(data))
 

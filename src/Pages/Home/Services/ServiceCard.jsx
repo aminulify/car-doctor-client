@@ -1,7 +1,7 @@
 import { IoIosArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({service}) => {
+const ServiceCard = ({service,handleScroll}) => {
     const {_id, img, title, price} = service;
     return (
         <div className="zoom-img p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
@@ -9,7 +9,7 @@ const ServiceCard = ({service}) => {
             <h1 className="text-left mt-2 text-xl font-bold">{title}</h1>
             <div className="flex justify-between items-center">
                 <p className="font-bold text-[var(--mainColor)] py-1">Price: ${price}</p>
-                <Link to={`/services/${_id}`}><div className="text-2xl text-[var(--mainColor)] hover:text-slate-800 hover:duration-500"><IoIosArrowDropright/></div></Link>
+                <Link onClick={handleScroll} to={`/services/${_id}`}><div className="text-2xl text-[var(--mainColor)] hover:text-slate-800 hover:duration-500"><IoIosArrowDropright/></div></Link>
             </div>
         </div>
     );
