@@ -263,20 +263,20 @@ const Order = () => {
                          <div onClick={handleUpdateClose} className='text-red-500 z-20 absolute text-4xl bg-white rounded-full -right-5 -top-5 cursor-pointer'><IoCloseCircle/></div>
                 <form onSubmit={handleUpdateData} data-aos="fade-right" className=' p-5 rounded-xl'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
-                        <input type="text" name='name' placeholder='Your Name' defaultValue={updateDataShow.name}  className='py-3 pl-2 rounded-md' />
+                        <input type="text" name='name' placeholder='Your Name' defaultValue={updateDataShow.name}  className='py-3 pl-2 rounded-md bg-white text-slate-800' />
 
                         {/* **** npm day-picker = react has stylist date picker component */}
-                        <input type={`text`} name='date' defaultValue={updateDataShow.date} className={`py-3 px-2 rounded-md`} />
+                        <input type={`text`} name='date' defaultValue={updateDataShow.date} className={`py-3 px-2 rounded-md bg-white text-slate-800`} />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
-                        <input type="text" name='phone' defaultValue={updateDataShow.phone} placeholder='Your Phone' className='py-3 pl-2 rounded-md' />
-                        <input type="text" name='email' defaultValue={updateDataShow.email}  placeholder='Your Email' className='py-3 pl-2 rounded-md' readOnly />
+                        <input type="text" name='phone' defaultValue={updateDataShow.phone} placeholder='Your Phone' className='py-3 pl-2 rounded-md bg-white text-slate-800' />
+                        <input type="text" name='email' defaultValue={updateDataShow.email}  placeholder='Your Email' className='py-3 pl-2 rounded-md bg-white text-slate-800' readOnly />
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mb-5'>
-                        <input type="text" name='service' defaultValue={updateDataShow.service} className='py-3 pl-2 rounded-md' readOnly/>
-                        <input type="text" name='dueAmount' defaultValue={updateDataShow.dueAmount} className='py-3 pl-2 rounded-md' readOnly/>
+                        <input type="text" name='service' defaultValue={updateDataShow.service} className='py-3 pl-2 rounded-md bg-white text-slate-800' readOnly/>
+                        <input type="text" name='dueAmount' defaultValue={updateDataShow.dueAmount} className='py-3 pl-2 rounded-md bg-white text-slate-800' readOnly/>
                     </div>
-                    <textarea name="massage" id="" className='w-full p-2' rows="8" placeholder='Write about your car...' defaultValue={updateDataShow.massage}></textarea>
+                    <textarea name="massage" id="" className='w-full p-2 bg-white text-slate-800' rows="8" placeholder='Write about your car...' defaultValue={updateDataShow.massage}></textarea>
 
                 
                         

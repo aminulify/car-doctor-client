@@ -124,7 +124,7 @@ const ServiceDetails = () => {
                          {
                             serviceTitle.map(title=><div
                             key={title._id}>
-                            <Link onClick={handleScroll} className="" to={`/services/${title._id}`}><h3 className={`flex justify-between text-lg font-medium py-3 my-3 ${(title._id === id.id) ? 'bg-[var(--mainColor)] text-white' : 'bg-white'} px-4 rounded-sm hover:bg-[var(--mainColor)] hover:text-white hover:duration-500 items-center`}>{title.title} <FaCircleChevronRight/></h3></Link>
+                            <Link onClick={handleScroll} className="" to={`/services/${title._id}`}><h3 className={`flex justify-between text-md md:text-lg font-medium py-3 my-3 ${(title._id === id.id) ? 'bg-[var(--mainColor)] text-white' : 'bg-white'} px-4 rounded-sm hover:bg-[var(--mainColor)] hover:text-white hover:duration-500 items-center`}>{title.title} <FaCircleChevronRight/></h3></Link>
                          </div>)
 
                          

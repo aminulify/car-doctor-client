@@ -51,10 +51,6 @@ const Checkout = () => {
         });
         event.target.reset();  
         });
-
-        
-        
-
         
     }
 

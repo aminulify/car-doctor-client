@@ -3,12 +3,14 @@ import ServiceCard from './ServiceCard';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
+
     const [services,setServices] = useState([]);
     useEffect(()=>{
         fetch('https://car-doctor-server-kwxj.onrender.com/services')
         .then(res=>res.json())
         .then(data=>setServices(data));
     },[]);
+    console.log(services);
     // scroll up 
     const handleScroll = () =>{
         window.scrollTo(0,0)
@@ -23,14 +25,15 @@ const Services = () => {
             </div>
 
             {/* service card  */}
-            <div data-aos="fade-right" className='grid grid-cols-1 md:grid-cols-3 gap-5 md:mx-8 mx-8'>
+            <div data-aos="fade-right" className='relative grid grid-cols-1 md:grid-cols-3 gap-5 md:mx-8 mx-8'>
                {
-                services.map((service)=><ServiceCard
-                    key={service._id}
-                    service={service}
-                    handleScroll={handleScroll}
-                ></ServiceCard>)
-               } 
+                services.length===0 ? <span className="fixed top-[50%] z-30 left-[50%] loading loading-dots translate-x-[-50%] bg-[var(--mainColor)] w-[80px]"></span> : services.map((service)=><ServiceCard
+                key={service._id}
+                service={service}
+                handleScroll={handleScroll}
+            ></ServiceCard>)
+                  
+               }
             </div>
 
             {/* more services btn  */}
