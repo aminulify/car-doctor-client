@@ -303,7 +303,7 @@ const Order = () => {
                 <img src="./assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
 
                 <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.5)] rounded-xl w-full h-full top-0'>
-                    <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-150%] md:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Manage Order</h1>
+                    <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] md:translate-y-[-150%] lg:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Manage Order</h1>
                     <div className="absolute left-1/2 bottom-0 translate-x-[-50%]">
                         <div className='relative w-[350px] md:w-[450px] border-b-[40px] md:border-b-[40px] border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-b-[var(--mainColor)]'><h1 className="absolute md:text-xl text-md font-bold text-white top-[5px] left-1/2 translate-x-[-50%]">Home - Order</h1></div>
                     </div>

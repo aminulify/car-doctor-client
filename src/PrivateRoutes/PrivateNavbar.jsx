@@ -62,7 +62,7 @@ const PrivateNavbar = () => {
         <div className='bg-white text-slate-800'>
 
         {
-            navigation.state==="loading"? <span className="absolute top-[50%] z-30 left-[50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""
+            navigation.state==="loading"? <span className="absolute top-[50%] z-30 left-[50%] translate-x-[-50%] loading loading-dots bg-[var(--mainColor)] w-[80px]"></span> : ""
           
         }
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
