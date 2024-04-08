@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 const Register = () => {
     const {createUser, moreDetailsUser, googleAuthPopUp, facebookAuthPop, user} = useContext(AuthContext);
     const [passwordError, setPasswordError] = useState(null);
@@ -129,10 +130,10 @@ const Register = () => {
             <p className='text-center py-4 text-sm font-medium text-slate-400'>Or Login With</p>
                 <div className='flex justify-center gap-3'>
                     <button onClick={handleGoogleAuth} className='p-1 border rounded-full  border-black hover:border-[var(--mainColor)] hover:duration-500'>
-                        <img src="./assets/images/login/g.png" className='w-10' alt="" />
+                        <img loading="lazy" src="./assets/images/login/g.png" className='w-10' alt="" />
                     </button>
                     <button onClick={handleFbAuth} className='p-1 border rounded-full  border-black hover:border-[var(--mainColor)] hover:duration-500'>
-                        <img src="./assets/images/login/fb.png" className='w-10' alt="" />
+                        <img loading="lazy" src="./assets/images/login/fb.png" className='w-10' alt="" />
                     </button>
 
                 </div>
@@ -140,7 +141,7 @@ const Register = () => {
                 </div>
 
             <div data-aos="fade-left" className='flex justify-center'>
-                <img src="./assets/images/login/login.svg" alt="" className='md:w-[80%] md:block hidden'/>
+                <img loading="lazy" src="./assets/images/login/login.svg" alt="" className='md:w-[80%] md:block hidden'/>
             </div>
         </div>
     );

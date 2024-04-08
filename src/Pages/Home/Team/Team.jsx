@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 
+
 const Team = () => {
     return (
         <div className='py-10' id='team'>
@@ -24,7 +25,7 @@ const Team = () => {
                         <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/1.jpg" className="w-[300px] md:md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/1.jpg" className="w-[300px] md:md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Tire & Wheel</h1>
                            
@@ -42,7 +43,7 @@ const Team = () => {
                         <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/2.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/2.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Engine Checking</h1>
                            
@@ -60,7 +61,7 @@ const Team = () => {
                         <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/3.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/3.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Technology Checking</h1>
                            
@@ -87,7 +88,7 @@ const Team = () => {
                        <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/4.jpg" className="w-[300px] md:md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/4.jpg" className="w-[300px] md:md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Engine</h1>
                            
@@ -105,7 +106,7 @@ const Team = () => {
                         <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/5.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/5.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Engine Servicing</h1>
                            
@@ -123,7 +124,7 @@ const Team = () => {
                         <div className='text-center'>
                              <div className="p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500">
                             <div className="flex justify-center">
-                                <img src="./assets/images/team/6.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
+                                <img loading="lazy" src="./assets/images/team/6.jpg" className="w-[300px] md:h-[300px] object-cover rounded-sm" alt="team_image" />
                             </div>
                             <h1 className="mt-2 md:text-xl text-md font-bold">Car Engine</h1>
                            

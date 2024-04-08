@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
         <div data-aos="fade-up" className='bg-slate-800 text-white'>
             <footer className="footer py-10 px-20">
   <aside>
-    <Link to="/"><img src="../../assets/logodark.svg" className='w-20' alt="logo" /></Link>
+    <Link to="/"><img loading="lazy" src="../../assets/logodark.svg" className='w-20' alt="logo" /></Link>
     <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
   </aside> 
   <nav>

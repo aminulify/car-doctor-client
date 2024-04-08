@@ -9,6 +9,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 
+
 const PrivateNavbar = () => {
     const [navbarMobile, setNavbarMobile] = useState(false);
     const {logOut, user} = useContext(AuthContext);
@@ -68,7 +69,7 @@ const PrivateNavbar = () => {
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
             {/* left side  */}
             <Link to="/">
-                <img src="../../assets/logo.svg" className='w-20' alt="" />
+                <img loading="lazy" src="../../assets/logo.svg" className='w-20' alt="" />
             </Link>
 
              {/* menu close btn */}

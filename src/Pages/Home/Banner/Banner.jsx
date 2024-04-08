@@ -8,7 +8,7 @@ const Banner = () => {
             <div data-aos="fade-right" className='lg:mx-20 md:mx-8 mx-2'>
             <div className="carousel carousel-img w-full h-[400px]">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src="./assets/images/banner/1.jpg" className=" w-full bg-left-top" />
+                <img loading='lazy' src="./assets/images/banner/1.jpg" className=" w-full bg-left-top" />
 
                     {/* header text section  */}
                 <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full md:pl-10 px-5 bg-opacity-10 rounded-2xl z-3">
@@ -29,7 +29,7 @@ const Banner = () => {
 
             </div> 
             <div id="slide2" className="carousel-item relative w-full">
-                <img src="./assets/images/banner/2.jpg" className="w-full bg-left-top" />
+                <img loading='lazy' src="./assets/images/banner/2.jpg" className="w-full bg-left-top" />
 
                 {/* header text section  */}
                 <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full md:pl-10 px-5 bg-opacity-10 rounded-2xl z-3">
@@ -50,7 +50,7 @@ const Banner = () => {
 
             </div> 
             <div id="slide3" className="carousel-item relative w-full">
-                <img src="./assets/images/banner/3.jpg" className="w-full bg-left-top" />
+                <img loading='lazy' src="./assets/images/banner/3.jpg" className="w-full bg-left-top" />
                 
                 {/* header text section  */}
                 <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full md:pl-10 px-5 bg-opacity-10 rounded-2xl z-3">
@@ -71,7 +71,7 @@ const Banner = () => {
 
             </div> 
             <div id="slide4" className="carousel-item relative w-full">
-                <img src="./assets/images/banner/4.jpg" className="w-full bg-left-top" />
+                <img loading='lazy' src="./assets/images/banner/4.jpg" className="w-full bg-left-top" />
                 
                 {/* header text section  */}
                 <div className="absolute flex items-center bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.1)] h-full md:pl-10 px-5 bg-opacity-10 rounded-2xl z-3">

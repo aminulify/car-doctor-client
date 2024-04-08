@@ -7,6 +7,7 @@ import { IoIosClose } from "react-icons/io";
 import './Navbar.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
+
 const Navbar = () => {
     const [navbarMobile, setNavbarMobile] = useState(false);
     const navigation = useNavigation();
@@ -30,7 +31,7 @@ const Navbar = () => {
         <div data-aos="fade-left" className='lg:mx-20 flex justify-between items-center mx-5 py-3 z-10'>
             {/* left side  */}
             <Link to="/">
-                <img src="./assets/logo.svg" className='w-20' alt="" />
+                <img loading="lazy" src="./assets/logo.svg" className='w-20' alt="" />
             </Link>
 
              {/* menu close btn */}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ChooseUs = () => {
     return (
         <div id='chooseUs' className='text-center lg:mx-20 md:mx-8 mx-5'>
@@ -12,27 +13,27 @@ const ChooseUs = () => {
             {/* choose us working icons  */}
             <div data-aos="fade-right" className='grid md:grid-cols-6 grid-cols-3 gap-3'>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md'>
-                    <img src="./assets/icons/group.svg" className='w-16 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/group.svg" className='w-16 mx-auto' alt="" />
                     <h3 className='font-bold text-slate-800 text-center mt-2'>Expert Team</h3>
                 </div>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md bg-[var(--mainColor)]'>
-                    <img src="./assets/icons/Group 38729.svg" className='w-12 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/Group 38729.svg" className='w-12 mx-auto' alt="" />
                     <h3 className='font-bold text-white text-center mt-2'>Timely Response</h3>
                 </div>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md'>
-                    <img src="./assets/icons/person.svg" className='w-12 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/person.svg" className='w-12 mx-auto' alt="" />
                     <h3 className='font-bold text-slate-800 text-center mt-2'>12/7 Support</h3>
                 </div>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md'>
-                    <img src="./assets/icons/Wrench.svg" className='w-12 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/Wrench.svg" className='w-12 mx-auto' alt="" />
                     <h3 className='font-bold text-slate-800 text-center mt-2'>Best Equipment</h3>
                 </div>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md'>
-                    <img src="./assets/icons/check.svg" className='w-12 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/check.svg" className='w-12 mx-auto' alt="" />
                     <h3 className='font-bold text-slate-800 text-center mt-2'>100% Grantee</h3>
                 </div>
                 <div className='border p-3 flex flex-col justify-center mt-2 rounded-md'>
-                    <img src="./assets/icons/deliveryt.svg" className='w-12 mx-auto' alt="" />
+                    <img loading="lazy" src="./assets/icons/deliveryt.svg" className='w-12 mx-auto' alt="" />
                     <h3 className='font-bold text-slate-800 text-center mt-2'>Timely Delivery</h3>
                 </div>
             </div>

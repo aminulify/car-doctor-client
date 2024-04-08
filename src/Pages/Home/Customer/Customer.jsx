@@ -3,6 +3,7 @@ import Rating from 'react-rating';
 import { IoMdStar } from "react-icons/io";
 import { IoMdStarOutline } from "react-icons/io";
 
+
 const Customer = () => {
     return (
         <div className='text-center lg:mx-20 md:mx-8 mx-5 py-16'>
@@ -16,13 +17,13 @@ const Customer = () => {
                 {/* first person review  */}
                 <div className='border relative p-10 rounded-md'>
                     <div className='flex gap-5 items-center mb-3'>
-                        <div><img src="./assets/images/customer/1.jpg" className='text-[var(--mainColor)] w-16 h-16 object-cover rounded-full' alt="" /></div>
+                        <div><img loading="lazy" src="./assets/images/customer/1.jpg" className='text-[var(--mainColor)] w-16 h-16 object-cover rounded-full' alt="" /></div>
                         <div className='text-left'>
                             <h2 className='text-slate-800 font-bold text-2xl'>Awlad Hossain</h2>
                         <p className='text-slate-400'>Businessman</p>
                         </div>
                         <div className='w-16 md:w-24 absolute right-5 top-5 opacity-10'>
-                            <img src="./assets/icons/quote.svg" alt="" />
+                            <img loading="lazy" src="./assets/icons/quote.svg" alt="" />
                         </div>
                         
                         
@@ -46,13 +47,13 @@ const Customer = () => {
                 {/* second person review  */}
                 <div className='border relative p-10 rounded-md'>
                     <div className='flex gap-5 items-center mb-3'>
-                        <div><img src="./assets/images/customer/2.jpg" className='w-16 h-16 object-cover object-left rounded-full' alt="" /></div>
+                        <div><img loading="lazy" src="./assets/images/customer/2.jpg" className='w-16 h-16 object-cover object-left rounded-full' alt="" /></div>
                         <div className='text-left'>
                             <h2 className='text-slate-800 font-bold text-2xl'>Md Aminul Islam</h2>
                         <p className='text-slate-400'>Businessman</p>
                         </div>
                         <div className='w-16 md:w-24 absolute right-5 top-5 opacity-10'>
-                            <img src="./assets/icons/quote.svg" alt="" />
+                            <img loading="lazy" src="./assets/icons/quote.svg" alt="" />
                         </div>
                         
                         

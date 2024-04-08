@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { IoCloseCircle } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 
+
 // const [countOrder,setCountOrder] = useState([]);
 const Order = () => {
     const {user, logOut} = useContext(AuthContext);
@@ -230,7 +231,7 @@ const Order = () => {
                         {/* close  */}
                          <div onClick={handleClose} className='text-red-500 z-20 absolute text-4xl bg-white rounded-full -right-5 -top-5 cursor-pointer'><IoCloseCircle/></div>
 
-                        <img src={getData.photoURL} className='rounded-md' alt="" />
+                        <img loading="lazy" src={getData.photoURL} className='rounded-md' alt="" />
                         <h1 className='text-left text-xl mt-2 font-bold'>{getData.service}</h1>
                         <p className='font-medium text-sm mt-2'>Name: {getData.name}</p>
                         <p className='font-medium text-sm'>Email: {getData.email}</p>
@@ -300,7 +301,7 @@ const Order = () => {
             <div className='lg:mx-20 md:mx-8 mx-5'>
                  {/* header img */}
             <div data-aos="fade-down" className='relative mt-3 md:mb-16 mb-8'>
-                <img src="./assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
+                <img loading="lazy" src="./assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
 
                 <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.5)] rounded-xl w-full h-full top-0'>
                     <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] md:translate-y-[-150%] lg:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Manage Order</h1>

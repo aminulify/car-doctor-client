@@ -5,12 +5,13 @@ import { IoMdStarOutline } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
+
 const ProductCard = ({product}) => {
     const {price, title, rating, img} = product;
     return (
         <div className="zoom-img p-5 border rounded-md hover:border-[var(--mainColor)] hover:duration-500 text-center">
             <div className='relative image-hover-zoom'>
-                <img src={img} className=" bg-slate-50 w-full h-[300px] object-cover rounded-md" alt="service_image" />
+                <img loading="lazy" src={img} className=" bg-slate-50 w-full h-[300px] object-cover rounded-md" alt="service_image" />
 
                 {/* shopping btn  */}
                 <Link to="/order"><button className='absolute top-3 right-3 text-[var(--mainColor)] text-xl p-2 bg-[#fce2de] rounded-md hover:text-white hover:bg-[var(--mainColor)] hover:duration-500'><HiOutlineShoppingBag/></button></Link>

@@ -3,6 +3,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import { MdEditSquare } from "react-icons/md";
 import './OrderMaping.css';
 
+
 const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditService, handleConfirm}) => {
     const {_id, photoURL, email, date, service, dueAmount, status} = order;
     
@@ -14,7 +15,7 @@ const OrderMaping = ({order,handleDetailsModal, handleDeleteService, handleEditS
                 <div onClick={()=>handleEditService(_id)} className='text-3xl text-[var(--mainColor)] hover:text-black hover:duration-500 cursor-pointer'><MdEditSquare/></div>
                 </div>
                 <div className=' flex gap-5 items-center'>
-                    <img src={photoURL} className='w-24 h-24 rounded-md object-cover hiddenForPhone' alt="" />
+                    <img loading="lazy" src={photoURL} className='w-24 h-24 rounded-md object-cover hiddenForPhone' alt="" />
                     <div>
                         <h1 className='text-lg md:text-xl font-bold'>{service}</h1>
                         <p className='font-medium text-slate-500 '>Email: {email}</p>

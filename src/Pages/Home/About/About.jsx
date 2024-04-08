@@ -6,9 +6,9 @@ const About = () => {
         <div className=''>
             <div className=' mb-16 pt-10 md:my-16 md:grid md:grid-cols-2 flex flex-col-reverse mx-8 lg:mx-20 md:mx-8 gap-10 items-center' id='about'>
             <div data-aos="fade-right" className='relative'>
-                <img src="./assets/images/about_us/person.jpg" alt="person_img" className='w-5/6 h-[420px] object-cover rounded-xl object-left'/>
+                <img loading='lazy' src="./assets/images/about_us/person.jpg" alt="person_img" className='w-5/6 h-[420px] object-cover rounded-xl object-left'/>
                 
-                <img src="./assets/images/about_us/parts.jpg" alt="parts_img" className='absolute top-1/2 w-3/4 h-[250px] object-cover right-0 border-t-[14px] border-l-[14px] border-white rounded-md'/>
+                <img loading='lazy' src="./assets/images/about_us/parts.jpg" alt="parts_img" className='absolute top-1/2 w-3/4 h-[250px] object-cover right-0 border-t-[14px] border-l-[14px] border-white rounded-md'/>
              
             </div>
             <div data-aos="fade-left">

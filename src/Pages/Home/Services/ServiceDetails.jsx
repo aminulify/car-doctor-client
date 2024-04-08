@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { FaCircleChevronRight } from "react-icons/fa6";
 import {useParams} from 'react-router-dom'
 
+
 const ServiceDetails = () => {
     
     const id = useParams();
@@ -37,7 +38,7 @@ const ServiceDetails = () => {
             <div className='md:mx-8 lg:mx-20 mx-5 overflow-hidden'>
             {/* header img */}
             <div data-aos="fade-down" className='relative mt-3 md:mb-16 mb-10'>
-                <img src="../../assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
+                <img loading="lazy" src="../../assets/images/checkout/checkout.png" alt="" className='rounded-lg h-[200px] md:h-full w-full object-cover '/>
 
                 <div className='absolute bg-gradient-to-r from-[#151515] to-[rgba(0, 0, 0, 0.5)] rounded-xl w-full h-full top-0'>
                     <h1 className=' absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-100%] md:translate-y-[-220%] text-center text-3xl md:text-6xl font-bold text-white md:mt-24 my-6'>Service Details</h1>
@@ -52,7 +53,7 @@ const ServiceDetails = () => {
                 {/* left-section  */}
                 <div className='col-span-2'>
                     <div data-aos="fade-right">
-                    <img src={img} alt="" className='w-full h-[350px] object-cover object-bottom rounded-lg' />
+                    <img loading="lazy" src={img} alt="" className='w-full h-[350px] object-cover object-bottom rounded-lg' />
                     <h1 className='font-bold text-4xl mt-5'>Unique Car Engine Service</h1>
                     <h4 className='text-xl font-bold py-2 text-slate-400'>{title}</h4>
                     <p className="text-left w-[98%]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
@@ -132,7 +133,7 @@ const ServiceDetails = () => {
                          
                     </div>
                         <div data-aos="fade-left" className='my-10 p-10 pb-16 rounded-xl bg-slate-900 text-white'>
-                            <img src="../../assets/logodark.svg" className='w-32 mx-auto' alt="" />
+                            <img loading="lazy" src="../../assets/logodark.svg" className='w-32 mx-auto' alt="" />
 
                             <h2 className='my-5 font-bold text-2xl text-center'>Need Help? We Are Here to Help You</h2>
 

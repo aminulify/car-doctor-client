@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 const Login = () => {
     const {signInUser} = useContext(AuthContext);
 
@@ -40,7 +41,7 @@ const Login = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:mx-20 mx-5 md:py-10 mb-10 items-center overflow-hidden'>
             <div data-aos="fade-right" className='flex justify-center'>
-                <img src="./assets/images/login/login.svg" alt="" className='md:w-[80%] md:block hidden'/>
+                <img loading="lazy" src="./assets/images/login/login.svg" alt="" className='md:w-[80%] md:block hidden'/>
             </div>
             <form data-aos="fade-left" onSubmit={handleLogin} className='border bg-white md:px-20 px-12'>
                 <h1 className='text-center py-8 text-4xl font-bold text-slate-800'>Login</h1>
