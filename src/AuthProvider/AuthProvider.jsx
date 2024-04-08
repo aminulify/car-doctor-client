@@ -47,7 +47,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser);
-            console.log("user",currentUser);
+            // console.log("user",currentUser);
             setLoading(false);
 
             if(currentUser && currentUser.email){
@@ -64,7 +64,7 @@ const AuthProvider = ({children}) => {
             .then(res=>res.json())
 
             .then(data=>{
-                console.log('jwt response',data);
+                // console.log('jwt response',data);
 
                 // WARNING: Local storage is not the best (second best place) store access token
                 localStorage.setItem('car-access-token', data.token);

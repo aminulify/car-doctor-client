@@ -10,7 +10,7 @@ const Services = () => {
         .then(res=>res.json())
         .then(data=>setServices(data));
     },[]);
-    console.log(services);
+    // console.log(services);
     // scroll up 
     const handleScroll = () =>{
         window.scrollTo(0,0)

@@ -45,14 +45,14 @@ const Register = () => {
                   });
                  
             })
-            .catch(e=>console.log("normal",e));     
+            .catch(e=>// console.log("normal",e));     
             
             
              // jwt security access use on AuthProvider as a global
             navigate(from, { replace: true });
             })
 
-         .catch(e=>console.log("main",e));   
+         .catch(e=>// console.log("main",e));   
     }
     // google 
     const handleGoogleAuth = () =>{
@@ -74,7 +74,7 @@ const Register = () => {
 
 
         })
-        .catch(e=>console.log("normal",e)); 
+        .catch(e=>// console.log("normal",e)); 
         
     }
     // facebook 
@@ -97,7 +97,7 @@ const Register = () => {
 
 
         })
-        .catch(e=>console.log("normal",e)); 
+        .catch(e=>// console.log("normal",e)); 
     }
 
 

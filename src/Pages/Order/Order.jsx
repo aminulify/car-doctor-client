@@ -29,7 +29,7 @@ const Order = () => {
         .then(res=>res.json())
         .then(data=>{
             if(!data.error){
-                console.log("Aminul Looping");
+                // console.log("Aminul Looping");
                 setOrders(data);
                 setLoading(false);
             
@@ -109,7 +109,7 @@ const Order = () => {
         const massage = field.massage.value;
 
         const update = {name, email, date, service, dueAmount, massage, phone};
-        console.log(update);
+        // console.log(update);
 
         fetch(`https://car-doctor-server-kwxj.onrender.com/booking/${shareId}`,{
                 method: "PUT",
@@ -169,7 +169,7 @@ const Order = () => {
 
     // confirm button 
     const handleConfirm = (_id) =>{
-        console.log(_id);
+        // console.log(_id);
 
         Swal.fire({
             title: "Are you sure?",
@@ -188,11 +188,11 @@ const Order = () => {
                 body: JSON.stringify({status: 'Confirm'})
             })
             .then(res=>res.json())
-            .then(data=> {console.log(data)
+            .then(data=> {// console.log(data)
                 if(data.modifiedCount>0){
                     // update status 
                     const remaining = orders.filter(order=>order._id !== _id);
-                    console.log(remaining);
+                    // console.log(remaining);
 
                     const update = orders.find(updateOrder=>updateOrder._id === _id);
 

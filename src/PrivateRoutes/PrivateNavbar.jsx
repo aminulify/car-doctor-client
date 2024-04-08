@@ -16,7 +16,7 @@ const PrivateNavbar = () => {
     const navigation = useNavigation();
 
     const [dataCount, setDataCount] = useState([]);
-    console.log(dataCount);
+    // console.log(dataCount);
 
     
 
@@ -40,7 +40,7 @@ const PrivateNavbar = () => {
                 .then(()=>{
                     localStorage.removeItem('car-access-token');
                 })
-                .catch(e=>console.log(e));
+                .catch(e=>// console.log(e));
             }
           });
     }

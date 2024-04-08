@@ -40,7 +40,7 @@ const Checkout = () => {
         })
         .then(res=>res.json())
         .then(data=> {
-            console.log(data);
+            // console.log(data);
             // successful massage 
             Swal.fire({
                 title:"Congratulation! Booking Successful.",
