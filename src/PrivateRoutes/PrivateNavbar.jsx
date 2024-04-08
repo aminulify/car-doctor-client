@@ -40,7 +40,7 @@ const PrivateNavbar = () => {
                 .then(()=>{
                     localStorage.removeItem('car-access-token');
                 })
-                .catch(e=>// console.log(e));
+                .catch(e=>e);
             }
           });
     }

@@ -36,7 +36,7 @@ const Login = () => {
                 navigate(from);
                 window.scrollTo(0,0);
         })
-        .catch(e=>// console.log(e));
+        .catch(e=>e);
     }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:mx-20 mx-5 md:py-10 mb-10 items-center overflow-hidden'>
